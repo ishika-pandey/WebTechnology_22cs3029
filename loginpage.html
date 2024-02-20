@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="image.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="image.jpg">
+    <style>
+         body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            width: 100%;
+        }
+        form {
+            text-align: center;
+            width: 80%; 
+            max-width: 400px; 
+            margin: 0 auto; 
+        }
+        input[type="textarea"],
+        input[type="button"] {
+            width: 110%; 
+            box-sizing: border-box;
+            padding: 10px; 
+            margin-bottom: 10px;
+        }
+        input[type="button"] {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form id ="loginpage">
+        <h3>Enter your email</h3>
+        <label for="Email"></label>
+        <input type="textarea"id="Email"placeholder="Email address">
+    </br>
+    </br>
+    <a href="C:\Users\Mayank bharti\Downloads\web d\login1.html">
+    <input type="button" id ="nextButton" value="NEXT"color="black"></a>
+    </form>
+    <script>
+        document.getElementById("nextButton").addEventListener("click", function(event) {
+            var email = document.getElementById("Email").value.trim();
+            if (email === "") {
+                alert("Please fill out the email address.");
+                event.preventDefault(); // Prevent the default action (going to the next page)
+            } else {
+                // If the email field is filled, proceed to the next page
+                window.location.href = "C:\Users\Mayank bharti\Downloads\web d\login1.html";
+            }
+        });
+    </script>
+   
+    
+</body>
+</html>
