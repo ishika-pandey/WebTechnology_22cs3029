@@ -55,18 +55,26 @@
     <div id="header">
         <h2 style="margin: 0;">Humble Home</h2>
     </div>
-
-    
-    <div id="nav">
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="C:\Users\Mayank bharti\Downloads\web d\loginpage.html">Login</a>
-    </div>
-
-    
+        <div id="nav">
+             <a href="C:\Users\Mayank bharti\Downloads\web d\about.html">About</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\contact.html">Contact</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\loginpage.html">Login</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\products.html" id="menu">Menu</a>
+        </div>
     <div id="image-container">
         <img id="main-image" src="C:\Users\Mayank bharti\Downloads\web d\home.webp" alt="Home Decor Image">
     </div>
+    <script>
+        document.getElementById('products.html').addEventListener('click', function() {
+            var productsSection = document.getElementById('products');
+            if (productsSection.style.display === 'none') {
+                productsSection.style.display = 'block';
+            } else {
+                productsSection.style.display = 'none';
+            }
+        });
+    </script>
+
 
 </body>
 </html>

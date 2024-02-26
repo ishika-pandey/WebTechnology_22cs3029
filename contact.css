@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f2f2f200;
+    padding: 20px;
+    text-align: center;
+  }
+.active-link {
+    font-size: 50px;
+    color: #ff0000;
+  }
+  nav ul li:first-child a {
+    font-size: 50px; 
+  }
+  nav ul li:first-child a:active {
+    font-size: 50px; 
+    color: #ff0000; 
+  }
+  main {
+    margin: 20px;
+  }
+  
+  form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  label,
+  input,
+  textarea {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  #response {
+    margin-top: 20px;
+  }
+  
