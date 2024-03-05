@@ -24,40 +24,72 @@
 
     <main>
         <div class="product">
-            <img src="products1.webp" alt="Product 1 Image">
+            <img src="kitchen.jpg" alt="Kitchen">
             <div class="product-info">
-                <h2>Product 1</h2>
-                <p>Description of Product 1 goes here.</p>
-                <p>Price: $50</p>
-                <button>Add to Cart</button>
+                <h2>Kitchen</h2>
+                <p>Get your kitchen essentials here...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Kitchen appliances</button>
+                        <button>Cookware sets</button>
+                        <button>Cutting boards</button>
+                        <button>Utensils</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
             </div>
         </div>
 
         <div class="product">
-            <img src="products2.jpg" alt="Product 2 Image">
+            <img src="bath.jpg" alt="bath">sz
             <div class="product-info">
-                <h2>Product 2</h2>
-                <p>Description of Product 2 goes here.</p>
-                <p>Price: $70</p>
-                <button>Add to Cart</button>
+                <h2>Bath</h2>
+                <p>Get spa-like oasis here...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Bath-Mats</button>
+                        <button>Towel sets</button>
+                        <button>Bath-Mirrors</button>
+                        <button>Hand Towels</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="product">
-            <img src="products3.jpg" alt="Product 3 Image">
+            <img src="bedding.jpg" alt="Bedding">
             <div class="product-info">
-                <h2>Product 3</h2>
-                <p>Description of Product 3 goes here.</p>
-                <p>Price: $70</p>
-                <button>Add to Cart</button>
+                <h2>Bedding</h2>
+                <p>Discover comfort with exquisite bedding collection...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Double Bed sheet</button>
+                        <button>Single Bed sheet</button>
+                        <button>Kids bed sheet</button>
+                        <button>Floral Bedsheet</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="product">
-            <img src="products4.webp" alt="Product 4 Image">
+            <img src="dining.webp" alt="Dining">
             <div class="product-info">
-                <h2>Product 4</h2>
-                <p>Description of Product 4 goes here.</p>
-                <p>Price: $70</p>
-                <button>Add to Cart</button>
+                <h2>Dining</h2>
+                <p>Elevate every meal with your dining space...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Mug,cups and kulhads</button>
+                        <button>Bowls</button>
+                        <button>Cutlery and Salad spoon</button>
+                        <button>Trays and platters</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
             </div>
         </div>
         
@@ -66,6 +98,13 @@
     <footer>
         <p>&copy; 2024 Humble Home. All rights reserved.</p>
     </footer>
+    <script>
+        // JavaScript function to toggle dropdown
+        function toggleDropdown(button) {
+            var dropdownContent = button.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        }
+    </script>
 
 </body>
 </html>

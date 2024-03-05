@@ -88,6 +88,31 @@ footer {
 
 
 .product img:hover {
-    transform: scale(3.2);
+    transform: scale(1.9);
 }
+.dropdown-content{
+    padding:20px;
+    text-align: left;
+
+}
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.dropdown-content button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content button:hover {
+    background-color: #555;
+}
+
 
