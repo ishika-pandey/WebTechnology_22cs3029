@@ -81,45 +81,33 @@
        .discount-banner {
             overflow: hidden;
             position: relative;
-            animation: slideIn 10s infinite; /* Apply slideIn animation */
-         }
-         .gift-promotion {
-            overflow: hidden;
-            position: relative;
-            animation: slideIn 20s infinite; /* Apply slideIn animation */
-         }
-         @keyframes slideIn {
+            animation: slideInDiscount 15s infinite; /* Apply slideInDiscount animation */
+}
+
+.gift-promotion {
+    overflow: hidden;
+    position: relative;
+    animation: slideInGift 15s infinite; /* Apply slideInGift animation */
+}
+
+@keyframes slideInDiscount {
     0% {
-        left: 100%;
-    }
-    25% {
-        left: 75%;
-    }
-    50% {
         left: 50%;
     }
-    75% {
-        left: 25%;
-    }
     100% {
-        left: 0%;
-    }
-    100% {
-        left: -25%;
-    }
-    75% {
         left: -50%;
     }
-    50% {
-        left: -75%;
-    }
-    25% {
-        left: -100%;
-    }
+}
+
+@keyframes slideInGift {
     0% {
-        right: 0%;
+        left: 50%;
+    }
+    100% {
+        left: -50%;
     }
 }
+
        
             
         </style>
