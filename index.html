@@ -82,35 +82,69 @@
             overflow: hidden;
             position: relative;
             animation: slideInDiscount 15s infinite; /* Apply slideInDiscount animation */
+        }
+
+        .gift-promotion {
+            overflow: hidden;
+            position: relative;
+            animation: slideInGift 15s infinite; /* Apply slideInGift animation */
+        }
+
+        @keyframes slideInDiscount {
+        0% {
+           left: 50%;
+        }
+        100% {
+           left: -50%;
+        }
+    }
+
+       @keyframes slideInGift {
+       0% {
+          left: 50%;
+       }
+       100% {
+          left: -50%;
+        }
+    }
+    .search-container {
+      position: absolute;
+      top: 95px;
+      right: 30px;
+    }
+
+    .search-form {
+  display: flex;
+  align-items: center;
 }
 
-.gift-promotion {
-    overflow: hidden;
-    position: relative;
-    animation: slideInGift 15s infinite; /* Apply slideInGift animation */
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-right: 1px;
 }
 
-@keyframes slideInDiscount {
-    0% {
-        left: 50%;
-    }
-    100% {
-        left: -50%;
-    }
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-@keyframes slideInGift {
-    0% {
-        left: 50%;
-    }
-    100% {
-        left: -50%;
-    }
+.search-button:hover {
+  background-color: #0056b3;
 }
 
-       
-            
-        </style>
+
+
+
+
+
+
+</style>
     <title>Humble Home</title>
 </head>
 <body>
@@ -122,6 +156,14 @@
              <a href="C:\Users\Mayank bharti\Downloads\web d\contact.html">Contact</a>
              <a href="C:\Users\Mayank bharti\Downloads\web d\loginpage.html">Login</a>
              <a href="C:\Users\Mayank bharti\Downloads\web d\products.html" id="menu">Menu</a>
+             <div class="search-container">
+                <form action="/search" method="GET" class="search-form">
+                  <input type="text" name="q" placeholder="Search..." class="search-input">
+                  <button type="submit" class="search-button" >Search </button>
+                </form>
+              </div>
+              
+              
         </div>
     <div id="image-container">
         <main>
