@@ -93,6 +93,7 @@ footer {
 .dropdown-content{
     padding:20px;
     text-align: left;
+    display: none;
 
 }
 .dropdown-content ul {
