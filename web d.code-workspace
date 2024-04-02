@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../express-demo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "express-demo"
+	}
+}
