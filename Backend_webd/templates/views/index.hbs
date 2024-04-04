@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        #header {
+            text-align: center;
+            background-color: #fff;
+            color: #000;
+            padding: 20px 0;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        #nav {
+            text-align: center;
+            background-color: #000;
+            padding: 10px 0;
+        }
+
+        #nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        #image-container {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #main-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .gift-promotion {
+            color: black;
+            padding: 5px;
+            text-align: center;
+            animation: shimmer 2s infinite alternate;
+            background-color:white;
+            font-weight: bold;
+        }
+        .discount-banner {
+            color: black;
+            padding: 5px;
+            text-align: center;
+            animation: shimmer 2s infinite alternate;
+            background-color: white; 
+            font-weight: strong;
+        }
+
+        @keyframes shimmer {
+            0% {
+                opacity: 0.5;
+           }
+           100% {
+              opacity: 1;
+        }
+       }
+       #footer{
+           font-weight: bold;
+           text-align: center;
+           font-size: 20px;
+           padding-top: 50px;
+           padding-bottom: 50px;
+       }
+       .discount-banner {
+            overflow: hidden;
+            position: relative;
+            animation: slideInDiscount 15s infinite; /* Apply slideInDiscount animation */
+        }
+
+        .gift-promotion {
+            overflow: hidden;
+            position: relative;
+            animation: slideInGift 15s infinite; /* Apply slideInGift animation */
+        }
+
+        @keyframes slideInDiscount {
+        0% {
+           left: 50%;
+        }
+        100% {
+           left: -50%;
+        }
+    }
+
+       @keyframes slideInGift {
+       0% {
+          left: 50%;
+       }
+       100% {
+          left: -50%;
+        }
+    }
+    .search-container {
+      position: absolute;
+      top: 95px;
+      right: 30px;
+    }
+
+    .search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  margin-right: 1px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid black;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+</style>
+    <title>Humble Home</title>
+</head>
+<body>
+    <div id="header">
+        <h2 style="margin: 0;">Humble Home</h2>
+    </div>
+        <div id="nav">
+             <a href="C:\Users\Mayank bharti\Downloads\web d\Backend_webd\templates\views\about.hbs">About</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\Backend_webd\templates\views\contact.hbs">Contact</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\Backend_webd\templates\views\loginpage.hbs">Login</a>
+             <a href="C:\Users\Mayank bharti\Downloads\web d\Backend_webd\templates\views\products.hbs" id="menu">Menu</a>
+             <div class="search-container">
+                <form action="/search" method="GET" class="search-form">
+                  <input type="text" name="q" placeholder="Search..." class="search-input">
+                  <button type="submit" class="search-button" >Search </button>
+                </form>
+              </div>
+              
+              
+        </div>
+    <div id="image-container">
+        <main>
+            <!-- Discount banner -->
+            <div class="discount-banner">
+                <p>Get 20% off on all items! Use code <strong>SAVE20</strong></p>
+            </div>
+            <!-- Gift promotion -->
+            <div class="gift-promotion">
+                <p>Get a free decorative pillow with purchases over $200!</p>
+            </div>
+        <!-- <script src="index.js"></script> -->
+         </main>
+        <img id="main-image" src="C:\Users\Mayank bharti\Downloads\web d\Backend_webd\templates\views\home.webp" alt="Home Decor Image">
+    </div>
+    <script>
+        document.getElementById('products.hbs').addEventListener('click', function() {
+            var productsSection = document.getElementById('products');
+            if (productsSection.style.display === 'none') {
+                productsSection.style.display = 'block';
+            } else {
+                productsSection.style.display = 'none';
+            }
+        });
+    </script>
+    <div id="footer">
+    <footer>
+        <p>&copy; 2024 Humble Home. All rights reserved.</p>
+    </footer>
+    </div>
+</body>
+</html>
