@@ -5,20 +5,12 @@ const hbs=require("hbs");
 require("./db/conn");
 
 const port =process.env.port || 3000;
+const staticPath = path.join(__dirname, "../public");
+app.use(express.static(staticPath));
 
-const static_path = path.join(__dirname,"../public");
-app.use(express.static(static_path));
-app.use("/images", express.static(path.join(__dirname, "../public")));
-
-app.get("/",(req,res)=>{
-    res.sendFile("/C:\Users\Mayank bharti\Downloads\web d\Backend_webd\public\index.html");
-
+app.listen(port, () => {
+    console.log(`Server is running at port ${port}`);
 });
-app.get("/images",(req,res)=>{
-    res.sendFile("/C:\Users\Mayank bharti\Downloads\web d\Backend_webd\public\images\home.jpg");
-
-});
-app.listen(port,()=>{
-    console.log(`server is running at port no ${port}`)
-    
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../public/index.html"));
 });
