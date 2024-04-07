@@ -115,5 +115,13 @@ footer {
 .dropdown-content button:hover {
     background-color: #555;
 }
+.more-button {
+    background-color: black;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 
