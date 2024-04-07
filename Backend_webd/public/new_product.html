@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products - Humble Home</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="icon" href="icon.png" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="icon.png">
+
+</head>
+<body>
+
+    <header>
+        <h1>Our Products</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="product">
+            <img src="kitchen.jpg" alt="Kitchen">
+            <div class="product-info">
+                <h2>Kitchen</h2>
+                <p>Get your kitchen essentials here...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Kitchen appliances</button>
+                        <button>Cookware sets</button>
+                        <button>Cutting boards</button>
+                        <button>Utensils</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="bath.jpg" alt="bath">sz
+            <div class="product-info">
+                <h2>Bath</h2>
+                <p>Get spa-like oasis here...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Bath-Mats</button>
+                        <button>Towel sets</button>
+                        <button>Bath-Mirrors</button>
+                        <button>Hand Towels</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="bedding.jpg" alt="Bedding">
+            <div class="product-info">
+                <h2>Bedding</h2>
+                <p>Discover comfort with exquisite bedding collection...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Double Bed sheet</button>
+                        <button>Single Bed sheet</button>
+                        <button>Kids bed sheet</button>
+                        <button>Floral Bedsheet</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="dining.webp" alt="Dining">
+            <div class="product-info">
+                <h2>Dining</h2>
+                <p>Elevate every meal with your dining space...</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Mug,cups and kulhads</button>
+                        <button>Bowls</button>
+                        <button>Cutlery and Salad spoon</button>
+                        <button>Trays and platters</button>
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="garden.jpg" alt="Garden">
+            <div class="product-info">
+                <h2>Garden</h2>
+                <p>Grow Your Garden, Elevate Your Space.</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Pots and Planters</button>
+                        <button>Artificial Flowers and plants</button>
+                        <button>Fountains</button>
+                        
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="fragrance.jpg" alt="Fragrance">
+            <div class="product-info">
+                <h2>Fragrance</h2>
+                <p>Inhale Bliss: Surround Yourself with Nature's Aroma.</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Diffusers</button>
+                        <button>Candles</button>
+                        <button>Aroma Oil</button>
+                        
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="wall.jpg" alt="Wall Decor">
+            <div class="product-info">
+                <h2>Wall Decor</h2>
+                <p>Make your walls adorable!</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Photo Frames</button>
+                        <button>Paintings and Posters</button>
+                        <button>Wall hangings</button>
+                        
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <img src="lighting.jpg" alt="Lighting">
+            <div class="product-info">
+                <h2>Lighting</h2>
+                <p>Every Moment with our Lighting collection.</p>
+                <button class="view-btn" onclick="toggleDropdown(this)">View</button>
+                <div class="dropdown-content">
+                    <ul>
+                        <button>Table Lamps</button>
+                        <button>Ceiling lights</button>
+                        <button>Floor Lamps</button>
+                        
+                        <!-- Add more items as needed -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+  
+
+    <footer>
+        <p>&copy; 2024 Humble Home. All rights reserved.</p>
+    </footer>
+    <script>
+        // JavaScript function to toggle dropdown
+        function toggleDropdown(button) {
+            let dropdownContent = button.nextElementSibling;
+            dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        }
+    </script>
+</body>
+</html>
