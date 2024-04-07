@@ -4,7 +4,7 @@ const app =express();
 const hbs=require("hbs");
 require("./db/conn");
 const Register = require("./models/user_register");
-const { register } = require("module");
+//const { register } = require("module");
 const port =process.env.port || 3000;
 const staticPath = path.join(__dirname, "../public");
 
