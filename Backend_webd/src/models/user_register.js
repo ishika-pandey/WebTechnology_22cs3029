@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema({
   countryCode: { type: Number, required: true },
   phone: { type: Number, required: true,unique:true },
   password: { type: String, required: true },
-  
+  email: { type: String, required: true,unique:true }
 });
 
 const Register = new mongoose.model("users_registration",userSchema);

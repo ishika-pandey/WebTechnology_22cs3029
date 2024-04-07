@@ -33,6 +33,7 @@ app.post("/Register", async(req, res) => {
             countryCode:req.body.countryCode,
             phone:req.body.phone,
             password:req.body.password,
+            email:req.body.email
            
         })
         const registered = await registers.save();
