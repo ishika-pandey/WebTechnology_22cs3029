@@ -92,6 +92,7 @@
                 </div>
             </div>
         </div>
+        <button class="more-button" onclick="redirectToLoginPage()">More &gt;&gt;&gt;</button>
         
     </main>
   
@@ -104,6 +105,12 @@
         function toggleDropdown(button) {
             let dropdownContent = button.nextElementSibling;
             dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
+        }
+    </script>
+     <script>
+        // JavaScript function to redirect to login page
+        function redirectToLoginPage() {
+            window.location.href = "\loginpage.html"; // Replace "login.html" with the actual path to your login page
         }
     </script>
 </body>
