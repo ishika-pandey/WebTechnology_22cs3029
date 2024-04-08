@@ -35,26 +35,44 @@
     </style>
 </head>
 <body>
-    <form  action="/Register1"method="POST"id ="loginpage">
+    <form  action="/verify-email"method="POST"id ="loginpage">
         <h3>Enter your email</h3>
         <label for="Email"></label>
-        <input type="email"id="Email"name="Email"placeholder="Email address">
+        <input type="email"id="email"name="Email"placeholder="Email address">
     </br>
     </br>
-    <a href="\new_product.html">
+    <!-- <a href="\new_product.html"> -->
     <input type="button" id ="nextButton" value="NEXT"color="black"></a>
     </form>
     <script>
-        document.getElementById("nextButton").addEventListener("click", function(event) {
-            var email = document.getElementById("Email").value.trim();
-            if (email === "") {
-                alert("Please fill out the email address.");
-                event.preventDefault(); // Prevent the default action (going to the next page)
-            } else {
-                // If the email field is filled, proceed to the next page
-                window.location.href = "C:\Users\Mayank bharti\Downloads\web d\Backend_webd\public\new_product.html";
-            }
-        });
+        async function verifyEmailAndRedirect() {
+    const email = document.getElementById("email").value.trim(); // Get email input value
+    if (email === "") {
+        alert("Please fill out the email address.");
+        // event.preventDefault();
+        return ;
+    }
+
+    try {
+    // Make AJAX request to backend route
+    const response = await fetch(`/verify-email?email=${email}`);
+    if (!response.ok) {
+        throw new Error('Network response was not ok');
+    }
+    // Parse response JSON
+    const { redirectTo } = await response.json();
+    // Redirect user based on response
+    window.location.href = redirectTo;
+} catch (error) {
+    console.error('Error:', error);
+    // Handle error (e.g., display error message to the user)
+}
+
+}
+
+// Event listener for button click to trigger email verification and redirection
+document.getElementById("nextButton").addEventListener("click", verifyEmailAndRedirect);
+
     </script>
    
     

@@ -13,9 +13,9 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(staticPath));
 
-app.listen(port, () => {
-    console.log(`Server is running at port ${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running at port ${port}`);
+// });
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"));
 });
@@ -44,4 +44,23 @@ app.post("/Register", async(req, res) => {
     }
 
 })
+app.get("/verify-email", async (req, res) => {
+    const email = req.query.email;
+
+    try {
+        const isEmailRegistered = await Register.exists({ email });
+        if (isEmailRegistered) {
+            res.json({ redirectTo: '../new_product.html' }); // Redirect to register page if email is registered
+        } else {
+            res.json({ redirectTo: '../register.html' }); // Redirect to products page if email is not registered
+        }
+    } catch (error) {
+        console.error('Error verifying email:', error);
+        res.status(500).json({ error: 'An error occurred' });
+    }
+});
+
+app.listen(port, () => {
+    console.log(`Server is running at port ${port}`);
+});
 

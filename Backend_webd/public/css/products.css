@@ -123,5 +123,8 @@ footer {
     border-radius: 5px;
     cursor: pointer;
 }
+.more-button:hover{
+    background-color: #555;
+}
 
 
