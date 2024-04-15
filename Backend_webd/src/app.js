@@ -4,6 +4,7 @@ const app =express();
 const hbs=require("hbs");
 require("./db/conn");
 const Register = require("./models/user_register");
+
 //const { register } = require("module");
 const port =process.env.port || 3000;
 const staticPath = path.join(__dirname, "../public");
@@ -59,6 +60,8 @@ app.get("/verify-email", async (req, res) => {
         res.status(500).json({ error: 'An error occurred' });
     }
 });
+
+
 
 app.listen(port, () => {
     console.log(`Server is running at port ${port}`);
