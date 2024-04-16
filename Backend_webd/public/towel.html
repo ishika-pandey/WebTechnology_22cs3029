@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Towel</title>
+    <link rel="stylesheet" href="\towel.css">
+    <link rel="icon" href="\images\icon.jpg" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="\images\icon.jpg">
+</head>
+<body>
+    <header>
+        <h1>Towel Page</h1>
+    </header>
+    
+    <main id="productContainer"></main>
+
+    <footer>
+        <p>Footer content goes here</p>
+    </footer>
+
+    <script>
+        fetch('/Product')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                return response.json();
+            })
+            .then(data => {
+                const productContainer = document.getElementById('productContainer');
+                if (productContainer) {
+                    data.forEach(item => {
+                        const productCard = document.createElement('div');
+                        productCard.classList.add('product');
+
+                        const productImage = document.createElement('img');
+                        productImage.src = item.image; // Assuming each item has an "image" property
+                        productImage.alt = item.name; // Add alt attribute for accessibility
+
+                        const productInfo = document.createElement('div');
+                        productInfo.classList.add('product-info');
+
+                        const productName = document.createElement('h2');
+                        productName.textContent = item.name;
+
+                        const productDescription = document.createElement('p');
+                        productDescription.textContent = item.description;
+
+                        const productPrice = document.createElement('p');
+                        productPrice.textContent = `Price: $${item.price}`;
+
+                        const productButton = document.createElement('button');
+                        productButton.textContent = 'Add to Cart';
+
+                        productInfo.appendChild(productName);
+                        productInfo.appendChild(productDescription);
+                        productInfo.appendChild(productPrice);
+                        productInfo.appendChild(productButton);
+
+                        productCard.appendChild(productImage);
+                        productCard.appendChild(productInfo);
+
+                        productContainer.appendChild(productCard);
+                    });
+                } else {
+                    console.error('Element with ID "productContainer" not found');
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+    </script>
+</body>
+</html>

@@ -4,6 +4,7 @@ const app =express();
 const hbs=require("hbs");
 require("./db/conn");
 const Register = require("./models/user_register");
+const Product = require("./models/product"); // Import your Product model
 
 //const { register } = require("module");
 const port =process.env.port || 3000;
@@ -23,6 +24,17 @@ app.get("/", (req, res) => {
 
 app.get("/Register", (req, res) => {
     res.sendFile(path.join(__dirname, "../models/user_register.js"));
+});
+app.get("/Product", async(req, res) => {
+    try {
+        // Fetch all items from the "item" collection in MongoDB
+        const items = await Product.find({});
+        // Send the items data as a JSON response to the frontend
+        res.json(items);
+    } catch (error) {
+        console.error('Error fetching items:', error);
+        res.status(500).json({ error: 'An error occurred while fetching items' });
+    }
 });
 
 app.post("/Register", async(req, res) => {
